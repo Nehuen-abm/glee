@@ -1,0 +1,41 @@
+if (!empty($data)) {
+
+  ?>
+
+           <div class="col-md-5 col-sm-offset-2">
+              <div class="alert alert-<?php echo $data['css']; ?>" role="alert">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <strong><?php echo $data['mensaje']; ?></strong> 
+            </div>
+           </div>
+<?php
+}
+?>
+
+
+
+<form role="form" action="<?php echo site_url('enviar-consulta'); ?>" method="POST" id="enviarConsulta">
+    
+        <div class="col-md-6 col-sm-6 col-xs-6 form_edit">
+          Nombre y Apellido
+          <input type="text" class="form-control" id="nombre" name="nombre" required="" placeholder="Nombre y Apellido">
+          
+          Teléfono
+          <input type="text" class="form-control" id="telefono" name="telefono" required="" placeholder="Teléfono">
+           
+          Email
+          <input type="email" class="form-control" id="email" name="email" required="" placeholder="E-mail">
+          
+      
+          Comentario
+         <textarea class="form-control" rows="4" name="mensaje" style="resize:vertical;" placeholder="Comentario"></textarea>
+        <input type="text"   name="robotHuman" value="" class="hidden">
+             <input type="submit" class="btn btn-primary pull-right" value="Consulta">
+        </div>
+     
+         <!--<input type="submit" name="enviar" value="Enviar" class="btn btn-success pull-right"/>--> 
+     
+         
+        
+     
+</form>
